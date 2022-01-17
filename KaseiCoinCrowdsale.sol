@@ -42,13 +42,13 @@ contract KaseiCoinCrowdsaleDeployer {
         // Create a new instance of the `KaseiCoinCrowdsale` contract
         KaseiCoinCrowdsale kaseicoin_sale = new KaseiCoinCrowdsale(1, wallet, token);
             
-        // Aassign the `KaseiCoinCrowdsale` contract’s address to the `kasei_crowdsale_address` variable.
-        // YOUR CODE HERE!
+        // Assign the `KaseiCoinCrowdsale` contract’s address to the `kasei_crowdsale_address` variable.
+        kasei_crowdsale_address = address(kaseicoin_sale);
 
         // Set the `KaseiCoinCrowdsale` contract as a minter
-        // YOUR CODE HERE!
+        token.addMinter(kasei_crowdsale_address);
         
         // Have the `KaseiCoinCrowdsaleDeployer` renounce its minter role.
-        // YOUR CODE HERE!
+        token.renounceMinter();
     }
 }
