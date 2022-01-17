@@ -29,10 +29,12 @@ contract KaseiCoinCrowdsaleDeployer {
 
     // Add the constructor.
     constructor(
-       // YOUR CODE HERE!
+       string memory name,
+       string memory symbol,
+       address payable wallet
     ) public {
         // Create a new instance of the KaseiCoin contract.
-        // YOUR CODE HERE!
+        KaseiCoin token = new KaseiCoin(name, symbol, 0);
         
         // Assign the token contract’s address to the `kasei_token_address` variable.
         // YOUR CODE HERE!
